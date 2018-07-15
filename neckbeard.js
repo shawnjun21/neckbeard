@@ -15,9 +15,9 @@ var neckbeardposturl = [
 "https://www.instagram.com/p/BlFZ8HfFfGs/?taken-by=54th_scout_battalion"
 ]
 var SquadIDs = {
-    [204130146834186241]:"nick",
-    [358133639126581249]:"jd",
-    [358133639126581249]:"mila",
+    ["442148001457111040"]:"nick",
+    ["204130146834186241"]:"jd",
+    ["357693946777829376"]:"mila",
 };
 var SquadStats = {
     ["nick"]:{
@@ -110,7 +110,7 @@ bot.on("message", message =>
             var str = util.RandomFromArray(stats.responses);
             str = str.replace("<noun>", util.RandomFromArray(stats.nouns))
             str = str.replace("<adj>", util.RandomFromArray(stats.adjectives))
-            message.channel.send(str);
+            message.channel.send(str);               
         }
     }
 });
