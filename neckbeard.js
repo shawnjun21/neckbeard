@@ -17,7 +17,7 @@ var neckbeardposturl = [
 var SquadIDs = {
     [204130146834186241]:"nick",
     [358133639126581249]:"jd",
-    [442148001457111040]:"mila",
+    [358133639126581249]:"mila",
 };
 var SquadStats = {
     ["nick"]:{
@@ -108,8 +108,8 @@ bot.on("message", message =>
         {
             var stats = SquadStats[SquadIDs[message.author.id]];
             var str = util.RandomFromArray(stats.responses);
-            str.replace("<noun>", util.RandomFromArray(stats.nouns))
-            str.replace("<adj>", util.RandomFromArray(stats.adjectives))
+            str = str.replace("<noun>", util.RandomFromArray(stats.nouns))
+            str = str.replace("<adj>", util.RandomFromArray(stats.adjectives))
             message.channel.send(str);
         }
     }
